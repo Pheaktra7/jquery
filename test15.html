@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .item-box{
+        width: 600px;
+        height: 400px;
+        background-color: black;
+    }
+
+    .box {
+        width: 100px;
+        display: inline-block;
+        height: 90px;
+        margin: 3px;
+        background-color: red;
+    }
+</style>
+<body>
+    <button id="append">Append</button>
+    <button id="remove">Remove</button>
+    <div class="item-box"></div>
+</body>
+<script src="jquery-3.6.3.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var i = 0;
+        $('#append').click(function(){
+            var box = '<div class="box">'+(i++)+'</div>';
+            $('.item-box').append(box);
+        });
+
+        $('body').on('click','.box',function(){
+            $(this).remove();
+        });
+
+        $('#remove').click(function(){
+            $('.item-box').empty();
+        });
+    });
+</script>
+</html>

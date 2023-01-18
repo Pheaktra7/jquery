@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/test4.css">
+    <title>Document</title>
+</head>
+<body>  
+    <div class="menu-bar">
+        <div class="header">
+            DashBoard
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About <i class="fa-solid fa-circle-info"></i></a></li>
+                <li id="drop-menu">
+                    <a>Post <i class="fa-solid fa-chevron-right"></i></a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Sport</a></li>
+                            <li><a href="#">Intertainment</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Login <i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
+                <li><a href="#">LogOut <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="jquery-3.6.3.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var i = true
+        $('#drop-menu').click(function(){
+            if(i){
+                $('.fa-chevron-right').addClass('rotate');
+            }
+            else {
+                $('.fa-chevron-right').removeClass('rotate');
+            }
+            i = !i
+            $('.sub-menu').slideToggle(500);
+        });
+    });
+</script>
+</html>

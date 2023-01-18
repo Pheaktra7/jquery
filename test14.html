@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        background-color: red;
+        margin: 5px;
+    }
+
+    .new_box{
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        display: inline-block;
+        background-color: blue;
+    }
+</style>
+<body>
+    <button id="add">Add after</button>
+    <div class="box">1</div>
+    
+</body>
+<script src="jquery-3.6.3.min.js"></script>
+<script>
+    $(document).ready(function(){
+        // var boxAfter = '<div class="new_box"></div>';
+        var i = 1;
+        $('#add').click(function(){
+            $('.box').after(`<div class="new_box">${i++}</div>`);
+            $('.box').before(`<div class="new_box">${i++}</div>`);
+        });
+    });
+</script>
+</html>

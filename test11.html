@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 700px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    img {
+        cursor: pointer;
+    }
+
+    .container .small-img{
+        width: 100%;
+        border: 2px solid black;
+        margin-bottom: 2px;
+    }
+
+    .container .small-img img {
+        width: 20%;
+        height: 100px;
+    }
+
+    .container .big-img {
+        width: 100%;
+        height: 300px;
+        border: 2px solid red;
+    }
+
+    .container .big-img img {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="small-img">
+            <img src="image/1.webp" alt="">
+            <img src="image/2.webp" alt="">
+            <img src="image/3.webp" alt="">
+        </div>
+        <div class="big-img">
+            <img src="image/1.webp" alt="">
+        </div>
+    </div>
+</body>
+<script src="jquery-3.6.3.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.small-img img').click(function(){
+            var img = $(this).attr('src');
+            $('.big-img img').attr('src',img);
+        });
+    });
+</script>
+</html>

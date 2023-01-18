@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 300px;
+        height: 270px;
+        margin: 10px 0;
+        background-color: red;
+    }
+
+    .bg-blue{
+        background-color: blue;
+        width: 400px;
+    }
+</style>
+<body>
+    <button class="add">Add</button>
+    <button class="remove">Remove</button>
+    <div class="box"></div>
+</body>
+<script src="jquery-3.6.3.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.add').click(function(){
+            $('.box').addClass('bg-blue');
+        });
+        $('.remove').click(function(){
+            $('.box').removeClass('bg-blue');
+        });
+        var i = 1;
+        $('.box').click(function(){
+            if(i == 1){
+                $(this).addClass('bg-blue');
+                i = 0;
+            }
+            else {
+                $(this).removeClass('bg-blue');
+                i = 1;
+            }
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/test8.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="menu-bar">
+        <div class="header">
+            <i class="fa-solid fa-bars btn"></i> BYG
+        </div>
+        <div class="menu">
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="jquery-3.6.3.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var menuItem = ['Home','About','Contact'];
+        // var menu  = $('.menu ul');
+        var txt =' ';
+        function getMenu(){
+            for(var li in menuItem){
+                txt += `<li><a href="#">${menuItem[li]}</a></li>`
+            }            
+            $('.menu ul').html(txt);
+            console.log(txt);
+        }
+
+        getMenu();
+        var i;
+        $('.btn').click(function(){
+            
+            if(i == 1){
+                $('.menu').css({left:'0'});
+                i = 0;
+            }
+            else {
+                $('.menu').css({left:'-400px'});
+                i =1;
+            }
+           
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello JavaScript</h1>
+    <button id="btn-text">change content</button>
+    <button id="oldContent">change to old content</button>
+</body>
+<script src="jquery-3.6.3.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#btn-text').click(function(){
+            $('h1').html('Hello jQuery');
+            // $('h1').text('Hello');
+        });
+
+        $('#oldContent').click(function(){
+            $('h1').html('Hello JavaScript'); 
+        }); 
+
+        $('title').text('Homepage');
+    });
+</script>
+</html>

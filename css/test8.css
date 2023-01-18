@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: arial;
+    box-sizing: border-box;
+}
+
+.menu-bar {
+    width: 250px;
+    height: 100vh;
+    position: relative;
+    background-color: #eee;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 7px;
+    font-size: 24px;
+    border-bottom: 1px solid #000;
+}
+
+.header i {
+    cursor: pointer;
+}
+
+.menu {
+    width: 100%;
+    position: absolute;
+    left: -400px;
+    transition: .6s;
+    background-color: #000;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li {
+    padding: 10px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 15px 10px;
+    display: block;
+    font-size: 16px;
+}

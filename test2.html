@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 300px;
+        height: 270px;
+        background-color: red;
+        margin: 10px 0;
+    }
+</style>
+<body>
+    <div class="box"></div>
+    <button id="hidden">fadeOut</button>
+    <button id="visible">fadeIn</button>
+    <button id="display">Hide/Show</button>
+    <button id="btn">fadeTo</button>
+</body>
+<script src="jquery-3.6.3.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#hidden').click(function(){
+            $('.box').fadeOut(3000);
+        });
+
+        $('#visible').click(function(){
+            $('.box').fadeIn(3000);
+        });
+
+        $('#display').click(function(){
+            $('.box').fadeToggle(1000);
+        });
+
+        $('#btn').click(function(){
+            $('.box').fadeTo('slow',0.1);
+        });
+    });
+</script>
+</html>

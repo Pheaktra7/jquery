@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        position: absolute;
+        width: 300px;
+        height: 200px;
+        background-color: red;
+    }
+
+    marquee {
+        position: absolute;
+        top: 60%;
+        background-color: red;
+        color: white;
+        padding: 10px 0;
+        width: 100%;
+        left: 0;
+    }
+</style>
+<body>
+    <button id="anime">click me</button>
+    <button id="stop">Stop animate</button>
+    <div class="box"></div>
+
+    <marquee behavior="scroll" direction="left" scrollamount="10">
+        Angkor Wat is a temple complex in Cambodia and is the largest religious monument in the world, on a site measuring 162.6 hectares
+    </marquee>
+</body>
+<script src="jquery-3.6.3.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#anime').click(function(){
+            $('.box').animate({width:'500px',height:'450px',left:'400px',opacity:'0.6'},3000);
+        });
+        
+        $('#stop').click(function(){
+            $('.box').stop();
+        });
+        var i = true
+        $('marquee').hover(function(){
+            if(i) {
+                this.stop();
+            }else {
+                this.start();
+            }
+            i = !i;
+        });
+    });
+</script>
+</html>
